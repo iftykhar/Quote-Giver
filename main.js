@@ -11,10 +11,33 @@ const quotes = [
   "Do what you can, with what you have, where you are. – Theodore Roosevelt"
 ];
 
-const quoteEl = document.getElementById('quote');
-const btn = document.getElementById('newQuoteBtn');
+const quoteEl = document.getElementById("quote");
+const newQuoteBtn = document.getElementById("newQuoteBtn");
+const addQuoteBtn = document.getElementById("addQuoteBtn");
+const quoteInput = document.getElementById("quoteInput");
 
-btn.addEventListener('click', () => {
+
+function displayRandomQuote() {
   const randomIndex = Math.floor(Math.random() * quotes.length);
   quoteEl.textContent = quotes[randomIndex];
-});
+}
+
+
+function addNewQuote() {
+  const newQuote = quoteInput.value.trim();
+  if (newQuote.length > 5) {
+    quotes.push(newQuote);
+    quoteInput.value = '';
+    displayRandomQuote(); // optionally show the new one
+    alert("✅ Quote added!");
+  } else {
+    alert("⚠️ Please enter a longer quote.");
+  }
+}
+
+
+newQuoteBtn.addEventListener("click", displayRandomQuote);
+addQuoteBtn.addEventListener("click", addNewQuote);
+
+
+displayRandomQuote();
