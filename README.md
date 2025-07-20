@@ -25,3 +25,7 @@ git clone https://github.com/yourusername/Quote-Giver.git
 🌐 [Portfolio](https://iftykhar-portfolio.vercel.app)
 🔗 [GitHub](https://github.com/iftykhar)
 💼 [LinkedIn](https://www.linkedin.com/in/iftykhar-alam/)
+
+## Visit Live Site
+
+🔗[Quote-Giver](https://quotegiver.tiiny.site/)
